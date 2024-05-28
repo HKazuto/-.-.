@@ -1,0 +1,28 @@
+public class Park {
+    private class Attraction {
+        String name;
+        String hours;
+        double cost;
+
+        public Attraction(String name, String hours, double cost) {
+            this.name = name;
+            this.hours = hours;
+            this.cost = cost;
+        }
+        public void printInfo() {
+            System.out.println("Аттракцион: " + name);
+            System.out.println("Часы работы: " + hours);
+            System.out.println("Цена: " + cost);
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        Attraction fly = new Park().new Attraction("Летающие кресла", "09:00 - 21:00", 250);
+        Attraction rollercoaster = new Park().new Attraction("Aмериканские горки", "09:00 - 21:00", 300);
+        Attraction tower = new Park().new Attraction("Башня", "10:00 - 21:00", 180);
+        fly.printInfo();
+        rollercoaster.printInfo();
+        tower.printInfo();
+    }
+}
